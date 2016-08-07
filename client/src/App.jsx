@@ -4,7 +4,8 @@ class App extends Component {
   render() {
     return (
       <section>
-        Hello, World!!!
+        <textarea className="writeMarkdown" cols="100" defaultValue="Write text here"></textarea>
+        <section className="renderMarkdown"></section>
       </section>
     );
   }
