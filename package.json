@@ -1,0 +1,19 @@
+{
+  "name": "evernote-markdown-sync",
+  "version": "0.0.0",
+  "description": "Write, edit markdown. Synchronize with Evernote",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/home/rafael/Dropbox/git/misc/evernote-markdown-sync/"
+  },
+  "keywords": [
+    "evernote",
+    "markdown"
+  ],
+  "author": "Rafael Espinoza rafael@rafaelespinoza.com",
+  "license": "ISC"
+}
