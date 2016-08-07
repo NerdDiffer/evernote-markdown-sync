@@ -2,9 +2,13 @@
   "name": "evernote-markdown-sync",
   "version": "0.0.0",
   "description": "Write, edit markdown. Synchronize with Evernote",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "npm install",
+    "postinstall": "curl -s https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/install | bash",
+    "start": "npm run front-end & npm run back-end",
+    "front-end": "webpack --watch",
+    "back-end": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,8 @@
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.0"
   }
 }
