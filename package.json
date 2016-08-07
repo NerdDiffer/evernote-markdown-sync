@@ -15,5 +15,8 @@
     "markdown"
   ],
   "author": "Rafael Espinoza rafael@rafaelespinoza.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^1.13.1"
+  }
 }
