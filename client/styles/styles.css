@@ -10,20 +10,13 @@ body {
   padding: 10px;
 }
 
-.renderMarkdown, .writeMarkdown {
+
+.editor, .renderer {
   width: 47%;
   height: 100%;
   margin: 5px;
   border: 1px solid black;
   padding: 5px;
-  display: inline-block;
   overflow: auto;
-}
-
-.writeMarkdown{
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-  resize: none;
-}
-
-.renderMarkdown {
+  display: inline-block;
 }

@@ -21,6 +21,10 @@ const config = {
         test: /\.jsx?/,
         include: SRC_DIR,
         loader: 'babel'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   }
