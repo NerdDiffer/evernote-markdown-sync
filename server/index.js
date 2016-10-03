@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const edam = require('./edam');
 require('dotenv').config();
 
 const app = express();
@@ -18,6 +19,8 @@ app.use(express.static(pathToStaticDir));
 app.get('/', (req, res) => {
   res.status(200).send();
 });
+
+app.use('/edam', edam);
 
 const port = process.env.PORT || 8000;
 
