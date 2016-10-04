@@ -8,7 +8,8 @@
     "postinstall": "curl -s https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/install | bash",
     "start": "npm run front-end & npm run back-end",
     "front-end": "webpack --watch",
-    "back-end": "nodemon server/index.js"
+    "back-end": "nodemon server/index.js",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,23 @@
     "webpack": "^1.13.1"
   },
   "devDependencies": {
+    "ava": "^0.16.0",
     "nodemon": "^1.10.0"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*_test.js"
+    ],
+    "source": [
+      "{server,client}/**/*.{js,jsx}",
+      "!client/dist/**/*"
+    ],
+    "concurrency": 5,
+    "failFast": false,
+    "tap": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
