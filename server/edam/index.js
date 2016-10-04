@@ -1,32 +1,36 @@
 const express = require('express');
-const handlers = require('./handlers');
+const user = require('./userController');
+const notebooks = require('./notebooksController');
+const notes = require('./notesController');
+const search = require('./searchController');
+const tags = require('./tagsController');
 
 const router = express.Router();
 
 // user
-router.get('/user', handlers.getUser);
+router.get('/user', user.getUser);
 
 // notebooks
-router.get('/notebooks', handlers.listNotebooks);
-router.get('/notebooks/:guid', handlers.listNotebook);
-router.post('/notebooks', handlers.createNotebook);
-router.put('/notebooks/:guid', handlers.updateNotebook);
+router.get('/notebooks', notebooks.listNotebooks);
+router.get('/notebooks/:guid', notebooks.getNotebook);
+router.post('/notebooks', notebooks.createNotebook);
+router.put('/notebooks/:guid', notebooks.updateNotebook);
 
 // notes
-router.get('/notes/:guid', handlers.getNote);
-router.post('/notes', handlers.createNote);
-router.put('/notes/:guid', handlers.updateNote);
+router.get('/notes/:guid', notes.getNote);
+router.post('/notes', notes.createNote);
+router.put('/notes/:guid', notes.updateNote);
 
 // search
-router.get('/search', handlers.listSearches);
-router.get('/search/:guid', handlers.getSearch);
-router.post('/search', handlers.createSearch);
-router.put('/search/:guid', handlers.updateSearch);
+router.get('/search', search.listSearches);
+router.get('/search/:guid', search.getSearch);
+router.post('/search', search.createSearch);
+router.put('/search/:guid', search.updateSearch);
 
 // tags
-router.get('/tags', handlers.listTags);
-router.get('/tags/:guid', handlers.getTag);
-router.post('/tags', handlers.createTag);
-router.put('/tags/:guid', handlers.updateTag);
+router.get('/tags', tags.listTags);
+router.get('/tags/:guid', tags.getTag);
+router.post('/tags', tags.createTag);
+router.put('/tags/:guid', tags.updateTag);
 
 module.exports = router;
