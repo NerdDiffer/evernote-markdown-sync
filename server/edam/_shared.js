@@ -1,10 +1,10 @@
-const Evernote = require('evernote').Evernote;
+const { Client } = require('evernote').Evernote;
 
 require('dotenv').config();
 
 const TOKEN = process.env.EVERNOTE_DEVELOPER_TOKEN;
 
-exports.client = new Evernote.Client({
+exports.client = new Client({
   token: TOKEN,
   sandbox: true,
   china: false

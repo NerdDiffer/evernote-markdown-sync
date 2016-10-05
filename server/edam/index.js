@@ -17,6 +17,7 @@ router.post('/notebooks', notebooks.createNotebook);
 router.put('/notebooks/:guid', notebooks.updateNotebook);
 
 // notes
+router.get('/notes/', notes.findNotesMetadata);
 router.get('/notes/:guid', notes.getNote);
 router.post('/notes', notes.createNote);
 router.put('/notes/:guid', notes.updateNote);
